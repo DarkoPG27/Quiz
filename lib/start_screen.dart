@@ -22,7 +22,7 @@ class StartScreen extends StatelessWidget {
               fontSize: 25,
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
