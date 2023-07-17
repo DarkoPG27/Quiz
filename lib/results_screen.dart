@@ -1,5 +1,6 @@
 import 'package:adv_basics/data/questions.dart';
 import 'package:flutter/material.dart';
+import 'package:adv_basics/questions_summary.dart';
 
 class ResultstScreen extends StatelessWidget {
   const ResultstScreen({
@@ -9,7 +10,7 @@ class ResultstScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
-  List<Map<String, Object>> getSummeryData() {
+  List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
@@ -33,7 +34,7 @@ class ResultstScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('You answered X out of Y questions correctly!'),
+            QuestionsSummary(summaryData: getSummaryData()),
             const SizedBox(height: 30),
             const Text('List of answers and questions'),
             const SizedBox(height: 30),
